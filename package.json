@@ -1,0 +1,24 @@
+{
+  "name": "grubyr-congress",
+  "version": "1.0.0",
+  "description": "congress app",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/avisaxena33/Grubyr-Congress.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/avisaxena33/Grubyr-Congress/issues"
+  },
+  "homepage": "https://github.com/avisaxena33/Grubyr-Congress#readme",
+  "dependencies": {
+    "express": "^4.15.4",
+    "nodemon": "^1.12.0",
+    "socket.io": "^2.0.3"
+  }
+}
