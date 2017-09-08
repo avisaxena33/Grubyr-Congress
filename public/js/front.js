@@ -1,44 +1,23 @@
+//Connect socket to server
 var socket = io.connect("http://localhost:3000");
 
-var burgerButton = document.getElementById("burger");
-var tacoButton = document.getElementById("taco");
-var iceButton = document.getElementById("ice");
-var bCount = document.getElementById("bg");
-var tCount = document.getElementById("tc");
-var iCount = document.getElementById("ic");
+//Setup input form field variables
+var btn = document.getElementById("submit");
+var food = document.getElementById("food");
+var location = document.getElementById("location");
+var deal = document.getElementById("deal");
 
-bCount.innerHTML = "0";
-tCount.innerHTML = "0";
-iCount.innerHTML = "0";
-
-
-burgerButton.addEventListener("click", function()
+btn.addEventListener("click", function()
 {
-    socket.emit("upvote", 
+    socket.emit("addFood", 
     {
-        food: "burger"
-    });
-});
-    
-tacoButton.addEventListener("click", function()
-{
-    socket.emit("upvote", 
-    {
-        food: "taco"
+        food: food.value,
+        location: location.value,
+        deal: deal.value
     });
 });
 
-iceButton.addEventListener("click", function()
-{
-    socket.emit("upvote", 
-    {
-        food: "ice"
-    });
-});
-    
 socket.on("upvote", function(data)
 {
-    bCount.innerHTML = data[0].count;
-    tCount.innerHTML = data[1].count;
-    iCount.innerHTML = data[2].count;    
+ 
 });
