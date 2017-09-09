@@ -17,6 +17,11 @@ btn.addEventListener("click", function()
     });
 });
 
+socket.on("addFood", function(data)
+{
+    
+}
+
 socket.on("upvote", function(data)
 {
  
