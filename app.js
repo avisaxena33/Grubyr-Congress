@@ -18,6 +18,7 @@ io.on("connection", function(socket)
 {
     console.log("Made socket connection", socket.id);
     
+    io.sockets.emit("startingFood", foodCount);
     io.sockets.emit("upvote", foodCount);
     
     socket.on("upvote", function(data)
@@ -44,6 +45,6 @@ io.on("connection", function(socket)
         
         delicacy.push(foodCount);
         io.sockets.emit("addFood", foodCount);
-    }
+    });
     
 });
