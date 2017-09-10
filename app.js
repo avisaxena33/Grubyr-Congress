@@ -15,7 +15,9 @@ app.use(express.static("public"));
 io.on("connection", function(socket)
 {
     console.log("Made socket connection", socket.id);
-        
+    
+    io.sockets.emit("startingFood", foodCount);
+    
     socket.on("upvote", function(data)
     {
         for(var i = 0; i< foodCount.length; i++)
@@ -39,7 +41,7 @@ io.on("connection", function(socket)
         };
         
         foodCount.push(delicacy);
-        io.sockets.emit("addFood", foodCount);
+        io.sockets.emit("addFood", delicacy);
     });
     
 });
