@@ -31,7 +31,7 @@ socket.on("addFood", function(data)
     div.addEventListener("click", function()
     {
         socket.emit("")
-    }
+    });
     document.getElementById("main").appendChild(div);
 });
 
