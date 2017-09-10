@@ -9,15 +9,32 @@ document.addEventListener("DOMContentLoaded", function()
     var location = document.getElementById("location");
     var deal = document.getElementById("deal");
     var btn = document.getElementById("submit");
-
+    
     btn.addEventListener("click", function()
     {
-        socket.emit("addFood", 
+        var foodItem = 
         {
-            food: food.value,
+            name: food.value,
             location: location.value,
-            deal: deal.value
-        });
+            deal: deal.value,
+            votes: 0
+        };
+        
+        var div = document.createElement("div");
+        div.style.width = "300px";
+        div.style.height = "300px";
+        div.style.backgroundColor = "red";
+        div.style.margin = "10px";
+        div.innerHTML = foodItem.name + " " + foodItem.location + " " + foodItem.deal + " " + foodItem.votes;
+        div.addEventListener("click", function()
+            {
+                socket.emit("upvote");
+            });
+    
+        socket.emit("addFood", foodItem);
+        
+        socket.emit("addFoodDiv", div);
+        
     });
 });
 

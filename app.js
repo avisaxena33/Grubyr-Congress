@@ -1,4 +1,5 @@
 var foodCount = [];
+var foodDivs = [];
 var express = require("express");
 var app = express();
 var socket = require("socket.io");
@@ -31,17 +32,16 @@ io.on("connection", function(socket)
     });
     
     socket.on("addFood", function(data)
-    {
-        var delicacy = 
-        {
-            name: data.food,
-            location: data.location,
-            deal: data.deal,
-            votes: 0
-        };
+    {   
+        foodCount.push(data);
         
-        foodCount.push(delicacy);
-        io.sockets.emit("addFood", delicacy);
+        io.sockets.emit("addFood", foodCount);
+    });
+    
+    socket.on("addFoodDiv", function(data)
+    {
+        foodDivs.push(data);
+        io.sockets.emit("addFoodDiv", foodDivs);
     });
     
 });
