@@ -1,6 +1,4 @@
 var foodCount = [];
-
-
 var express = require("express");
 var app = express();
 var socket = require("socket.io");
@@ -10,17 +8,14 @@ var server = app.listen(3000, function()
     console.log("listening on port 3000");
 });
 
-app.use(express.static("public"));
-
 var io = socket(server);
+
+app.use(express.static("public"));
 
 io.on("connection", function(socket)
 {
     console.log("Made socket connection", socket.id);
-    
-    io.sockets.emit("startingFood", foodCount);
-    io.sockets.emit("upvote", foodCount);
-    
+        
     socket.on("upvote", function(data)
     {
         for(var i = 0; i< foodCount.length; i++)
@@ -43,7 +38,7 @@ io.on("connection", function(socket)
             votes: 0
         };
         
-        delicacy.push(foodCount);
+        foodCount.push(delicacy);
         io.sockets.emit("addFood", foodCount);
     });
     
