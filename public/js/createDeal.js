@@ -20,21 +20,9 @@ document.addEventListener("DOMContentLoaded", function()
             votes: 0
         };
         
-        var div = document.createElement("div");
-        div.style.width = "300px";
-        div.style.height = "300px";
-        div.style.backgroundColor = "red";
-        div.style.margin = "10px";
-        div.innerHTML = foodItem.name + " " + foodItem.location + " " + foodItem.deal + " " + foodItem.votes;
-        div.addEventListener("click", function()
-            {
-                socket.emit("upvote");
-            });
     
         socket.emit("addFood", foodItem);
-        
-        socket.emit("addFoodDiv", div);
-        
+                
     });
 });
 
