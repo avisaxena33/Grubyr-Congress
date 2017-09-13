@@ -9,7 +9,7 @@ document.addEventListener("DOMContentLoaded", function()
     var location = document.getElementById("location");
     var deal = document.getElementById("deal");
     var btn = document.getElementById("submit");
-    
+
     btn.addEventListener("click", function()
     {
         var foodItem = 
@@ -20,7 +20,6 @@ document.addEventListener("DOMContentLoaded", function()
             votes: 0
         };
         
-    
         socket.emit("addFood", foodItem);
                 
     });
