@@ -20,19 +20,19 @@ io.on("connection", function(socket)
     
     socket.on("addFood", function(data)
     {   
-        foodCount.push(data);
+        foodCount.push(data); 
         io.sockets.emit("addFood", data);
     });
     
     socket.on("upvote", function(data)
     {
-        for (var i = 0; i < foodCount.length; i++)
+        foodCount.forEach(function(element)
             {
-                if (foodCount[i].name == data.name)
+                if (element.name == data.name)
                     {
-                        foodCount[i].votes++;
+                        element.votes++;
                     }
-            }
+            });
         
         io.sockets.emit("upvote", foodCount);
     });

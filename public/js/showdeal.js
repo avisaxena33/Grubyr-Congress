@@ -4,23 +4,22 @@ var foodCount = [];
 
 socket.on("showDeals", function(data)
 {
-    foodCount = data;
-    document.getElementById("main").innerHTML = "";
+    foodCount = data.slice(0);
 
-    for (var i = 0; i < foodCount.length; i++)
+    foodCount.forEach(function(element)
         {
             var div = document.createElement("div");
             div.style.width = "300px";
             div.style.height = "300px";
             div.style.backgroundColor = "red";
             div.style.margin = "10px";
-            div.innerHTML = foodCount[i].name + " " + foodCount[i].location + " " + foodCount[i].deal + " " + foodCount[i].votes;
+            div.innerHTML = element.name + " " + element.location + " " + element.deal + " " + element.votes;
             div.addEventListener("click", function()
                 {
-                    socket.emit("upvote", foodCount[i]);
+                    socket.emit("upvote", element);
                 });
             document.getElementById("main").appendChild(div);
-        }    
+        });    
 });
 
 socket.on("addFood", function(data)
@@ -42,19 +41,20 @@ socket.on("addFood", function(data)
 socket.on("upvote", function(data)
 {
     document.getElementById("main").innerHTML = "";
-    foodCount = data;
-    for (var i = 0; i < foodCount.length; i++)
+    foodCount = data.slice(0);
+    foodCount.forEach(function(element)
         {
             var div = document.createElement("div");
             div.style.width = "300px";
             div.style.height = "300px";
             div.style.backgroundColor = "red";
             div.style.margin = "10px";
-            div.innerHTML = foodCount[i].name + " " + foodCount[i].location + " " + foodCount[i].deal + " " + foodCount[i].votes;
+            div.innerHTML = element.name + " " + element.location + " " + element.deal + " " + element.votes;
+            console.log(element);
             div.addEventListener("click", function()
             {
-                socket.emit("upvote", foodCount[i]);
+                socket.emit("upvote", element);
             });
             document.getElementById("main").appendChild(div);   
-        }
+        });
 });
