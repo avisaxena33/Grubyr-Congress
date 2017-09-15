@@ -4,6 +4,7 @@ var foodCount = [];
 
 socket.on("showDeals", function(data)
 {
+    document.getElementById("main").innerHTML = "";
     foodCount = data.slice(0);
 
     foodCount.forEach(function(element)
