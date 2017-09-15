@@ -24,4 +24,17 @@ io.on("connection", function(socket)
         io.sockets.emit("addFood", data);
     });
     
+    socket.on("upvote", function(data)
+    {
+        for (var i = 0; i < foodCount.length; i++)
+            {
+                if (foodCount[i].name == data.name)
+                    {
+                        foodCount[i].votes++;
+                    }
+            }
+        
+        io.sockets.emit("upvote", foodCount);
+    });
+    
 });
