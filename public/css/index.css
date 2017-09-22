@@ -1,0 +1,116 @@
+header {
+  background-image: url('../img/headerblur.jpeg');
+  background-size: cover;
+  width: 100%;
+  padding: 0;
+  margin: 0;
+  height: 80vh;
+}
+
+header h1 {
+  font-family: 'Raleway', sans-serif;
+  color: white;
+  margin: 0;
+  padding: 0;
+  margin-left: 50px;
+  padding-top: 30px;
+  font-size: 3em;
+  letter-spacing: -1px;
+}
+
+header .center-div {
+  background-color: ;
+  margin-left: auto;
+  margin-right: auto;
+  width: 650px;
+}
+
+header .center-div .desc {
+  color: white;
+  text-align: center;
+  font-weight: normal;
+  font-size: 2em;
+  margin-bottom: 40px;
+  text-transform: capitalize;
+}
+
+.formbox {
+  text-align: center;
+  margin-top: 0;
+}
+
+header .center-div .form-field {
+  position: relative;
+  margin-bottom: 45px;
+  display: inline-block;
+  margin: 0;
+}
+
+header .center-div input[type=text] {
+  outline: none;
+  display: block;
+  padding: 16px 15px;
+  border-radius: 5px;
+  width: 200px;
+  border: none;
+  font-size: 16px;
+  margin: 0;
+  margin-right: 3px;
+  box-shadow: 0px 1px 18px rgba(0, 0, 0, .6);
+}
+
+header label {
+  color: #CECECE;
+  font-size: 16px;
+  letter-spacing: 2px;
+  font-weight: normal;
+  position: absolute;
+  pointer-events: none;
+  left: 10px;
+  top: 15px;
+  transition: 0.2s ease all;
+}
+
+input:focus ~ label, input:valid ~ label {
+  top: -22px;
+  left: 0px;
+  letter-spacing: 1px;
+  font-size: 16px;
+  color: white;
+}
+
+header .mybutton {
+  display: inline-block;
+  margin: 0;
+}
+
+header button {
+  outline: none;
+  cursor: pointer;
+  padding: 16px 20px;
+  border-radius: 5px;
+  text-transform: uppercase;
+  background-color: #0563C1;
+  border: none;
+  color: white;
+  letter-spacing: 2px;
+  font-size: 16px;
+  box-shadow: 0px 1px 18px rgba(0, 0, 0, .6);
+}
+
+.cornerlink {
+  color: white;
+  text-decoration: none;
+}
+
+.corner {
+
+}
+
+.corner p {
+
+}
+
+.corner span {
+
+}
