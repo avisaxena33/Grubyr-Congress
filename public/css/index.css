@@ -1,10 +1,11 @@
 header {
-  background-image: url('../img/headerblur.jpeg');
+  background-image: url('../img/header.jpg');
   background-size: cover;
   width: 100%;
   padding: 0;
   margin: 0;
   height: 80vh;
+  position: relative;
 }
 
 header h1 {
@@ -101,6 +102,17 @@ header button {
 .cornerlink {
   color: white;
   text-decoration: none;
+  position: absolute;
+  top: 0;
+  right: 0;
+  margin-right: 15px;
+  margin-top: 15px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  background-color: #0563C1;
+  padding: 0px 10px 0px 10px;
+  border-radius: 5px;
+  box-shadow: 0px 1px 18px rgba(0, 0, 0, .6);
 }
 
 .corner {
@@ -113,4 +125,29 @@ header button {
 
 .corner span {
 
+}
+
+header span {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.4s;
+}
+
+header span:after {
+  content: '\02192';
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: -18px;
+  transition: 0.4s;
+}
+
+.cornerlink:hover span {
+  padding-right: 25px;
+}
+
+.cornerlink:hover span:after {
+  opacity: 1;
+  right: 0;
 }
