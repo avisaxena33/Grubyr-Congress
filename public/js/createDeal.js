@@ -22,7 +22,12 @@ document.addEventListener("DOMContentLoaded", function()
         };
         console.log(img.value);
         socket.emit("addFood", foodItem);
+        
                 
     });
 });
+
+    document.getElementById("submit").addEventListener("click", function() {
+        window.location.href = "confirmPage.html";
+    })
 
