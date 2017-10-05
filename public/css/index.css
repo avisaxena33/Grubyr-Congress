@@ -153,6 +153,15 @@ header span:after {
   right: 0;
 }
 
+/* About Section */
+
+.about-background {
+  background-image: url('../img/map.png');
+  background-size: auto 100%;
+  background-position: left;
+  background-repeat: no-repeat;
+}
+
 .about {
   padding: 55px;
   margin: 0;
@@ -178,4 +187,64 @@ header span:after {
   font-size: 1.05em;
   line-height: 180%;
   margin-top: 25px;
+}
+
+/* Instructions Section */
+
+.inst {
+  background-image: url('../img/city.jpg');
+  background-position: bottom;
+  background-size: cover;
+  margin: 0;
+  padding: 0;
+  padding: 50px;
+  padding-bottom: 30px;
+  text-align: center;
+}
+
+.inst-cont {
+  max-width: 1400px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.step {
+  background-color: rgba(255, 255, 255, .90);
+  width: 28.33%;
+  box-shadow: 0px 1px 18px rgba(0, 0, 0, .6);
+  margin-left: 1.5%;
+  margin-right: 1.5%;
+  padding: 1%;
+  float: left;
+  border-radius: 20px;
+}
+
+.step h6 {
+  font-size: 3.2em;
+  font-weight: normal;
+  background-color: #0563C1;
+  width: 68px;
+  color: white;
+  border-radius: 40px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: -40px;
+  margin-bottom: 5px;
+  box-shadow: 0px -5px 18px rgba(0, 0, 0, .6);
+}
+
+.step h5 {
+  font-size: 2em;
+  font-weight: lighter;
+  margin: 0;
+  margin-bottom: 16px;
+}
+
+.step img {
+  width: 96%;
+  margin: 0 2% 0 2%;
+}
+
+.step p {
+
 }
