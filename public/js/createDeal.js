@@ -9,23 +9,17 @@ document.addEventListener("DOMContentLoaded", function()
     var food = document.getElementById("food");
     var location = document.getElementById("location");
     var deal = document.getElementById("deal");
-    var img = document.getElementById("file").files[0];
        
     
     btn.addEventListener("click", function()
     {
         
-        getBase64();
-        fooded();
-                        
+        getBase64();     
+        //setTimeout(fooded(), 6000)
+        
     });
 });
 
-    document.getElementById("submit").addEventListener("click", function() {
-        
-    //window.location.href = "confirmPage.html";
-    });
-    
     
     
 function getBase64() {
@@ -35,7 +29,7 @@ function getBase64() {
   reader.addEventListener("load", function () {
     console.log("reader.result", reader.result);
           x = reader.result;
-
+          fooded();    
   }, false);
     
 
