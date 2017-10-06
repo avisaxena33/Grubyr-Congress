@@ -15,20 +15,9 @@ document.addEventListener("DOMContentLoaded", function()
     btn.addEventListener("click", function()
     {
         
-    getBase64();
-        
-    var foodItem = 
-    {
-        name: food.value,
-        location: location.value,
-        deal: deal.value,
-        votes: 0,
-        image: x
-    };
-
-        socket.emit("addFood", foodItem)
-        
-                
+        getBase64();
+        fooded();
+                        
     });
 });
 
@@ -45,6 +34,8 @@ function getBase64() {
 
   reader.addEventListener("load", function () {
     console.log("reader.result", reader.result);
+          x = reader.result;
+
   }, false);
     
 
@@ -52,9 +43,24 @@ function getBase64() {
     reader.readAsDataURL(file);
   }
     
-    x = reader.result;
 }
 
+
+function fooded()
+{
+
+    var foodItem = 
+    {
+        name: food.value,
+        location: location.value,
+        deal: deal.value,
+        votes: 0,
+        image: x
+    };
+        
+        socket.emit("addFood", foodItem)
+        
+}
 
 
 
