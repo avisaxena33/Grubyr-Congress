@@ -19,8 +19,14 @@ socket.on("showDeals", function(data)
                 {
                     socket.emit("upvote", element);
                 });
+        
+            var img = new Image();
+            img.src = element.image;
+            document.body.appendChild(img);
             document.getElementById("main").appendChild(div);
         });    
+    
+
 });
 
 socket.on("addFood", function(data)
@@ -36,6 +42,11 @@ socket.on("addFood", function(data)
     {
         socket.emit("upvote", data);
     });
+    
+    var img = new Image();
+    img.src = data.image;
+    document.body.appendChild(img);
+
     document.getElementById("main").appendChild(div);
 });
 
