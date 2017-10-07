@@ -22,7 +22,9 @@ socket.on("showDeals", function(data)
         
             var img = new Image();
             img.src = element.image;
-            document.body.appendChild(img);
+            img.style.height = "150px";
+            img.style.width = "150px";
+            div.appendChild(img);
             document.getElementById("main").appendChild(div);
         });    
     
@@ -45,8 +47,9 @@ socket.on("addFood", function(data)
     
     var img = new Image();
     img.src = data.image;
-    document.body.appendChild(img);
-
+    img.style.height = "150px";
+    img.style.width = "150px";
+    div.appendChild(img);
     document.getElementById("main").appendChild(div);
 });
 
@@ -62,11 +65,18 @@ socket.on("upvote", function(data)
             div.style.backgroundColor = "red";
             div.style.margin = "10px";
             div.innerHTML = element.name + " " + element.location + " " + element.deal + " " + element.votes;
-            console.log(element);
+        
             div.addEventListener("click", function()
             {
                 socket.emit("upvote", element);
             });
+        
+            var img = new Image();
+            img.src = element.image;
+            img.style.height = "150px";
+            img.style.width = "150px";
+            div.appendChild(img);
+        
             document.getElementById("main").appendChild(div);   
         });
 });
