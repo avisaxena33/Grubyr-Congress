@@ -34,6 +34,10 @@ io.on("connection", function(socket)
                     }
             });
         
+        foodCount.sort(function(a, b) {
+            return parseInt(b.votes) - parseInt(a.votes);
+        }); 
+        
         io.sockets.emit("upvote", foodCount);
     });
     
