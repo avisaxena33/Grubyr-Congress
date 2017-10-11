@@ -217,6 +217,13 @@ header span:after {
   padding: 1%;
   float: left;
   border-radius: 20px;
+  transition: .3s;
+}
+
+.step:hover {
+  position: relative;
+  margin-top: -15px;
+  margin-bottom: 15px;
 }
 
 .step h6 {
