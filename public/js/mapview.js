@@ -6,7 +6,7 @@
 
     var map = new google.maps.Map(document.getElementById("map"), {
 
-          zoom: 6,
+          zoom: 12,
           mapTypeId: google.maps.MapTypeId.ROADMAP,
 					styles: [
     {
@@ -121,7 +121,7 @@
             navigator.geolocation.getCurrentPosition(function(position) {
               var pos = {
                 lat: position.coords.latitude,
-                lng: position.coords.longitude
+                lng: position.coords.longitude - .12
               };
               map.setCenter(pos);
             });
