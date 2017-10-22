@@ -7,7 +7,10 @@ document.addEventListener("DOMContentLoaded", function()
 {
     var btn = document.getElementById("submit");
     var food = document.getElementById("food");
-    var location = document.getElementById("location");
+    var address = document.getElementById("address");
+    var city = document.getElementById("city");
+    var state = document.getElementById("state");
+    var zip = document.getElementById("zip");
     var deal = document.getElementById("deal");
        
     
@@ -15,7 +18,6 @@ document.addEventListener("DOMContentLoaded", function()
     {
         
         getBase64();     
-        //setTimeout(fooded(), 6000)
         
     });
 });
@@ -46,7 +48,10 @@ function fooded()
     var foodItem = 
     {
         name: food.value,
-        location: location.value,
+        address: address.value,
+        city: city.value,
+        state: state.value,
+        zip: zip.value,
         deal: deal.value,
         votes: 0,
         image: x
