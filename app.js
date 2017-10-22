@@ -16,6 +16,11 @@ io.on("connection", function(socket)
 {
     console.log("Made socket connection", socket.id);
     
+    socket.on("getCity", function()
+    {
+        io.sockets.emit("showDeals", foodCount);    
+    });
+    
     io.sockets.emit("showDeals", foodCount);
     
     socket.on("addFood", function(data)

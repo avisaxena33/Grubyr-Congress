@@ -7,6 +7,7 @@ header {
   margin: 0;
   height: 80vh;
   position: relative;
+
 }
 
 header h1 {
@@ -30,10 +31,12 @@ header .center-div {
 header .center-div .desc {
   color: white;
   text-align: center;
-  font-weight: normal;
-  font-size: 2em;
+  font-weight: bold;
   margin-bottom: 40px;
+  margin-top: 70px;
   text-transform: capitalize;
+  text-shadow: 0px 0px 15px black;
+  font-size: 2.3em;
 }
 
 .formbox {
@@ -81,23 +84,29 @@ input:focus ~ label, input:valid ~ label {
   color: white;
 }
 
-header .mybutton {
-  display: inline-block;
-  margin: 0;
-}
-
 header button {
   outline: none;
   cursor: pointer;
   padding: 16px 20px;
   border-radius: 5px;
   text-transform: uppercase;
+  /*background-image: linear-gradient(0deg, #30d0f5 0%, #0773de 80%);*/
   background-color: #0563C1;
   border: none;
   color: white;
   letter-spacing: 2px;
   font-size: 16px;
   box-shadow: 0px 1px 18px rgba(0, 0, 0, .6);
+  transition: all .3s;
+}
+
+header .mybutton {
+  display: inline-block;
+  margin: 0;
+}
+
+header button:hover {
+  background-color: #0670da;
 }
 
 .cornerlink {
@@ -198,7 +207,8 @@ header span:after {
   margin: 0;
   padding: 0;
   padding: 50px;
-  padding-bottom: 30px;
+  padding-bottom: 50px;
+  padding-top: 80px;
   text-align: center;
 }
 
