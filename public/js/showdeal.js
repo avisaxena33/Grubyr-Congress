@@ -10,7 +10,7 @@ socket.on("showDeals", function(data)
 
     foodCount.forEach(function(element)
         {
-            if(element.city == userCity)
+            if(element.city.toLowerCase() == userCity.toLowerCase())
                {
                     var div = document.createElement("div");
                     div.style.width = "300px";
@@ -35,7 +35,7 @@ socket.on("showDeals", function(data)
 
 socket.on("addFood", function(data)
 {
-    if(data.city == userCity)
+    if(data.city.toLowerCase() == userCity.toLowerCase())
        {
             foodCount.push(data);
             var div = document.createElement("div");
