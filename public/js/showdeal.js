@@ -22,7 +22,7 @@ socket.on("showDeals", function(data)
                         {
                             socket.emit("upvote", element);
                         });
-        
+
                     var img = new Image();
                     img.src = element.image;
                     img.style.height = "150px";
@@ -30,7 +30,7 @@ socket.on("showDeals", function(data)
                     div.appendChild(img);
                     document.getElementById("main").appendChild(div);
                }
-        });    
+        });
 });
 
 socket.on("addFood", function(data)
@@ -56,7 +56,7 @@ socket.on("addFood", function(data)
             div.appendChild(img);
             document.getElementById("main").appendChild(div);
        }
-          
+
         });
 
 socket.on("upvote", function(data)
@@ -249,19 +249,19 @@ socket.on("upvote", function(data)
 		        "title": "Naps Pizza",
 		        "lat": 42.104362,
 		        "lng": -88.023158,
-		        "description": "<img src='https://s3-media4.fl.yelpcdn.com/bphoto/W49qGwmQSYIxl--igRPuoA/180s.jpg' alt='memes'><strong style='display: block;'>Naps Pizza: </strong>$2 for 3 slices"
+		        "description": "<div class='blurb'><img src='img/eat.jpg' alt='dee'><div class='righta'><h6>Napoli's Pizza</h6><span>5 Slices for $3</span></div></div>"
 		    },
 		    {
-		        "title": "Chipotle",
+		        "title": " ",
 		        "lat": 42.1387124,
 		        "lng": -88.0277098,
-		        "description": "<strong>Chipotle: </strong>Buy 1 get 1 free"
+		        "description": "<div class='blurb'><img src='img/eat.jpg' alt='dee'><div class='righta'><h6>Chipotle</h6><span>Free Burrito with every Purchase</span></div></div>"
 		    },
 		    {
-		        "title": "Pizza Bella",
+		        "title": " ",
 		        "lat": 42.1223608,
 		        "lng": -88.0483642,
-		        "description": "<strong>Pizza Bella: </strong>$3 for 3 slices"
+		        "description": "<div class='blurb'><img src='img/eat.jpg' alt='dee'><div class='righta'><h6>Pizza Bella</h6><span>Three slices for $3</span></div></div>"
 		    }
 		]
 

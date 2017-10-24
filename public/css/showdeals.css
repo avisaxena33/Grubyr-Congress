@@ -3,6 +3,38 @@
   padding: 0;
 }
 
+.gm-style .gm-style-iw {
+  margin: 0;
+  padding: 0;
+}
+
+.map-info-window {
+  background-color: blue;
+}
+
+.blurb img {
+  width: 100px;
+  height: 100px;
+  float: left;
+  border-radius: 50px;
+}
+
+.righta {
+  float: left;
+  margin-left: 10px;
+}
+
+.blurb h6 {
+  font-size: 2em;
+  font-weight: lighter;
+  margin: 0;
+  margin-bottom: 3px;
+}
+
+.blurb span {
+  margin: 0;
+}
+
 .sidebar {
   background-color: rgba(200, 200, 200, 0.5);
   height: 100vh;
