@@ -6,9 +6,9 @@
         <script  src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/2.0.3/socket.io.js"></script>
     </head>
     <body>
-      <h1>Grubyr</h1>
-      <div class="top-bround"></div>
-      <div class="bot-bround"></div>
+      <a href="index.html"><h1>Grubyr</h1></a>
+
+      <div class="grad"></div>
 
       <div class="center">
       <h2>Post your Deal</h2>
@@ -21,17 +21,37 @@
 
           <div class="form-field half">
             <input type="text" class="stateinput" required>
-            <label>LOCATION</label>
+            <label>ADDRESS</label>
           </div>
+
+          <div class="form-field half">
+            <input type="text" class="stateinput" required>
+            <label>CITY</label>
+          </div>
+
+          <div class="form-field half">
+            <input type="text" class="stateinput" required>
+            <label>STATE</label>
+          </div>
+
+          <div class="form-field half">
+            <input type="text" class="stateinput" required>
+            <label>ZIP CODE</label>
+          </div>
+
+          <span class="fileup">
+            <span style="font-size: 18px; margin: 0;">&#8682;</span> Upload a Photo
+            <input type="file" id="file" />
+          </span>
 
           <div class="form-field full">
             <input type="text" class="stateinput" required>
             <label>DEAL DETAILS</label>
           </div>
 
-          <input type="file" id="file" />
-
         </div>
+
+          <button id="submit">Post Your Deal &#10548;</button>
 
       </div>
 
