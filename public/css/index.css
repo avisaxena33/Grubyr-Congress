@@ -1,13 +1,27 @@
 header {
-  background-image: url('../img/header.jpg');
+  background-image: url('../img/header2.jpg');
   background-size: cover;
   background-position: center;
+/*  background-color: #0563C1;
+  background-image: linear-gradient(to top, #00c6fb 10%, #005bea 100%); */
   width: 100%;
   padding: 0;
   margin: 0;
   height: 80vh;
   position: relative;
+}
 
+.mask {
+  position: absolute;
+  height: 80vh;
+  width: 100%;
+  padding: 0;
+  margin: 0;
+  background-image: linear-gradient(to top, #00c6fb 10%, #005bea 100%);
+  opacity: 0.7;
+  z-index: 5;
+  top: 0;
+  left: 0;
 }
 
 header h1 {
@@ -19,10 +33,11 @@ header h1 {
   padding-top: 30px;
   font-size: 3em;
   letter-spacing: -1px;
+  position: relative;
+  z-index: 10;
 }
 
 header .center-div {
-  background-color: ;
   margin-left: auto;
   margin-right: auto;
   width: 650px;
@@ -33,10 +48,11 @@ header .center-div .desc {
   text-align: center;
   font-weight: bold;
   margin-bottom: 40px;
-  margin-top: 70px;
+  margin-top: 90px;
   text-transform: capitalize;
-  text-shadow: 0px 0px 15px black;
   font-size: 2.3em;
+  position: relative;
+  z-index: 11;
 }
 
 .formbox {
@@ -165,7 +181,6 @@ header span:after {
 /* About Section */
 
 .about-background {
-  background-image: url('../img/map.png');
   background-size: auto 100%;
   background-position: left;
   background-repeat: no-repeat;
@@ -198,18 +213,29 @@ header span:after {
   margin-top: 25px;
 }
 
+
 /* Instructions Section */
 
 .inst {
-  background-image: url('../img/city.jpg');
-  background-position: bottom;
-  background-size: cover;
+  background-image: linear-gradient(to top, #005bea 0%, #00c6fb 100%);
   margin: 0;
   padding: 0;
-  padding: 50px;
-  padding-bottom: 50px;
-  padding-top: 80px;
   text-align: center;
+}
+
+.inst2 {
+  padding: 50px;
+  padding-top: 50px;
+  margin-top: 30px;
+  padding-bottom: 70px;
+}
+
+.inst3 {
+  background-image: url('../img/circle.svg');
+  background-position: 50% -50%;
+  background-size: 1300px;
+  background-repeat: no-repeat;
+  padding-bottom: 50px;
 }
 
 .inst-cont {
@@ -219,15 +245,15 @@ header span:after {
 }
 
 .step {
-  background-color: rgba(255, 255, 255, .90);
-  width: 28.33%;
-  box-shadow: 0px 1px 18px rgba(0, 0, 0, .6);
+  background-color: white;
+  width: 27%;
   margin-left: 1.5%;
   margin-right: 1.5%;
   padding: 1%;
   float: left;
-  border-radius: 20px;
+  border-radius: 8px;
   transition: .3s;
+  border: solid white 5px;
 }
 
 .step:hover {
@@ -239,15 +265,15 @@ header span:after {
 .step h6 {
   font-size: 3.2em;
   font-weight: normal;
-  background-color: #0563C1;
+  background-color: white;
   width: 68px;
-  color: white;
+  color: #005bea;
   border-radius: 40px;
   margin-left: auto;
   margin-right: auto;
   margin-top: -40px;
   margin-bottom: 5px;
-  box-shadow: 0px -5px 18px rgba(0, 0, 0, .6);
+  display: none;
 }
 
 .step h5 {
@@ -258,10 +284,82 @@ header span:after {
 }
 
 .step img {
-  width: 96%;
-  margin: 0 2% 0 2%;
+  width: auto;
+  margin: 20px auto 20px auto;
+  height: 160px;
 }
 
 .step p {
 
+}
+
+
+
+
+
+.circles {
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+  position: relative;
+  z-index: 12;
+}
+
+.circle {
+  width: 180px;
+  height: 180px;
+  border-radius: 98px;
+  border: solid white 4px;
+  display: inline-block;
+  margin: 0 22px 0 22px;
+  transition: all .3s;
+}
+
+.circle2 {
+  position: relative;
+  top: 0px;
+}
+
+.circle img {
+  margin: 0;
+  height: 100px;
+  margin-top: 25px;
+}
+
+.circle .img2 {
+  height: 90px;
+  margin-top: 25px !important;
+}
+
+.circle p {
+  color: white;
+  font-weight: bold;
+  letter-spacing: 0px;
+  font-size: 1.3em;
+  margin-top: 0px;
+}
+
+.circle .p2 {
+  margin: 0;
+  margin-top: 10px;
+}
+
+.wave1 {
+  position: relative;
+  z-index: 20;
+  margin: 0;
+  padding: 0;
+  bottom: 0;
+  width: 100%;
+  height: 160px;
+  bottom: -5px;
+}
+
+.wave2 {
+  position: relative;
+  z-index: 30;
+  top: -20px;
+  margin-bottom: -100px;
+  width: 100%;
+  height: 170px;
 }

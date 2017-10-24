@@ -1,12 +1,12 @@
 .footer-basic-centered{
-	background-color: #0563C1;
-	box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.12);
+	background-color: transparent;
 	box-sizing: border-box;
 	width: 100%;
 	text-align: center;
 	font: normal 18px sans-serif;
 
 	padding: 30px;
+	padding-bottom: 0;
 	margin-top: 0;
 }
 
@@ -14,7 +14,7 @@
 	color: #ffffff;
 	font-size: 24px;
 	margin: 0;
-	margin-bottom: 15px;
+	margin-bottom: 5px;
 }
 
 .footer-basic-centered .footer-company-name{
