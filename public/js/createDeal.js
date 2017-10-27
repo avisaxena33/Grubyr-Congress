@@ -44,7 +44,7 @@ function getBase64() {
 
 function fooded()
 {
-
+    
     var foodItem = 
     {
         name: food.value,

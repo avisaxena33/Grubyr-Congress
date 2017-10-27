@@ -5,7 +5,7 @@ var foodCount = [];
 
 socket.on("showDeals", function(data)
 {
-    document.getElementById("main").innerHTML = "";
+    document.getElementById("sidebar").innerHTML = "";
     foodCount = data.slice(0);
 
     foodCount.forEach(function(element)
@@ -13,22 +13,17 @@ socket.on("showDeals", function(data)
             if(element.city.toLowerCase() == userCity.toLowerCase())
                {
                     var div = document.createElement("div");
-                    div.style.width = "300px";
-                    div.style.height = "300px";
-                    div.style.backgroundColor = "red";
-                    div.style.margin = "10px";
-                    div.innerHTML = element.name + " " + element.address + " " + element.city + " " + element.state + " " + element.zip + element.deal + " " + element.votes;
+                   
+                    div.className = "item";
+                   
+                    div.innerHTML = "<div class='item'><div class='item-vote'><img src='img/arrow.svg' alt='upvote' class='upvote'><p class='vote-num'>" + element.votes + "</p><img src='img/arrow.svg' alt='downvote' class='downvote'></div><img src='" + element.image + "' class='item-img' alt=''><div class='item-center'><div class='item-left'><h3 class='item-name'>" + element.name + "</h3><p class='item-desc'>" + element.deal + "</p></div><div class='item-right'><p class='item-distance-num'>0.3</p><p class='item-dist-end'>Miles</p></div></div></div>"
+
                     div.addEventListener("click", function()
                         {
                             socket.emit("upvote", element);
                         });
         
-                    var img = new Image();
-                    img.src = element.image;
-                    img.style.height = "150px";
-                    img.style.width = "150px";
-                    div.appendChild(img);
-                    document.getElementById("main").appendChild(div);
+                    document.getElementById("sidebar").appendChild(div);
                }
         });    
 });
@@ -39,51 +34,36 @@ socket.on("addFood", function(data)
        {
             foodCount.push(data);
             var div = document.createElement("div");
-            div.style.width = "300px";
-            div.style.height = "300px";
-            div.style.backgroundColor = "red";
-            div.style.margin = "10px";
-            div.innerHTML = data.name + " " + data.address + " " + data.city + " " + data.state + " " + data.zip + data.deal + " " + data.votes;
+            div.className = "item";
+            
+              div.innerHTML = "<div class='item'><div class='item-vote'><img src='img/arrow.svg' alt='upvote' class='upvote'><p class='vote-num'>" + data.votes + "</p><img src='img/arrow.svg' alt='downvote' class='downvote'></div><img src='" + data.image + "' class='item-img' alt=''><div class='item-center'><div class='item-left'><h3 class='item-name'>" + data.name + "</h3><p class='item-desc'>" + data.deal + "</p></div><div class='item-right'><p class='item-distance-num'>0.3</p><p class='item-dist-end'>Miles</p></div></div></div>"
+           
             div.addEventListener("click", function()
                 {
                     socket.emit("upvote", data);
                 });
 
-            var img = new Image();
-            img.src = data.image;
-            img.style.height = "150px";
-            img.style.width = "150px";
-            div.appendChild(img);
-            document.getElementById("main").appendChild(div);
+            document.getElementById("sidebar").appendChild(div);
        }
           
         });
 
 socket.on("upvote", function(data)
 {
-    document.getElementById("main").innerHTML = "";
+    document.getElementById("sidebar").innerHTML = "";
     foodCount = data.slice(0);
     foodCount.forEach(function(element)
         {
             var div = document.createElement("div");
-            div.style.width = "300px";
-            div.style.height = "300px";
-            div.style.backgroundColor = "red";
-            div.style.margin = "10px";
-            div.innerHTML = element.name + " " + element.address + " " + element.city + " " + element.state + " " + element.zip + element.deal + " " + element.votes;
+            div.className = "item";
 
+            div.innerHTML = "<div class='item'><div class='item-vote'><img src='img/arrow.svg' alt='upvote' class='upvote'><p class='vote-num'>" + element.votes + "</p><img src='img/arrow.svg' alt='downvote' class='downvote'></div><img src='" + element.image + "' class='item-img' alt=''><div class='item-center'><div class='item-left'><h3 class='item-name'>" + element.name + "</h3><p class='item-desc'>" + element.deal + "</p></div><div class='item-right'><p class='item-distance-num'>0.3</p><p class='item-dist-end'>Miles</p></div></div></div>"
             div.addEventListener("click", function()
             {
                 socket.emit("upvote", element);
             });
 
-            var img = new Image();
-            img.src = element.image;
-            img.style.height = "150px";
-            img.style.width = "150px";
-            div.appendChild(img);
-
-            document.getElementById("main").appendChild(div);
+            document.getElementById("sidebar").appendChild(div);
         });
 });
 
