@@ -104,6 +104,7 @@
   transform: rotate(90deg);
   margin-left: 21px;
   margin-top: 12px;
+  cursor: pointer;
 }
 
 .vote-num {
