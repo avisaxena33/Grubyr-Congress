@@ -5,7 +5,8 @@ var foodCount = [];
 
 socket.on("showDeals", function(data)
 {
-    document.getElementById("sidebar").innerHTML = "";
+    document.getElementById("sidebar").innerHTML = "<h1> Deals Near You </h1>";
+    
     foodCount = data.slice(0);
 
     foodCount.forEach(function(element)
@@ -24,14 +25,18 @@ socket.on("showDeals", function(data)
                         });
         
                     document.getElementById("sidebar").appendChild(div);
+
+            
                }
-        });    
+        });
 });
 
 socket.on("addFood", function(data)
 {
+    
     if(data.city.toLowerCase() == userCity.toLowerCase())
-       {
+       {    
+           
             foodCount.push(data);
             var div = document.createElement("div");
             div.className = "item";
@@ -45,12 +50,12 @@ socket.on("addFood", function(data)
 
             document.getElementById("sidebar").appendChild(div);
        }
-          
+
         });
 
 socket.on("upvote", function(data)
 {
-    document.getElementById("sidebar").innerHTML = "";
+    document.getElementById("sidebar").innerHTML = "<h1> Deals Near You </h1>";
     foodCount = data.slice(0);
     foodCount.forEach(function(element)
         {
@@ -229,19 +234,19 @@ socket.on("upvote", function(data)
 		        "title": "Naps Pizza",
 		        "lat": 42.104362,
 		        "lng": -88.023158,
-		        "description": "<img src='https://s3-media4.fl.yelpcdn.com/bphoto/W49qGwmQSYIxl--igRPuoA/180s.jpg' alt='memes'><strong style='display: block;'>Naps Pizza: </strong>$2 for 3 slices"
+		        "description": "<div class='blurb'><img src='img/eat.jpg' alt='dee'><div class='righta'><h6>Napoli's Pizza</h6><span>5 Slices for $3</span></div></div>"
 		    },
 		    {
-		        "title": "Chipotle",
+		        "title": " ",
 		        "lat": 42.1387124,
 		        "lng": -88.0277098,
-		        "description": "<strong>Chipotle: </strong>Buy 1 get 1 free"
+		        "description": "<div class='blurb'><img src='img/eat.jpg' alt='dee'><div class='righta'><h6>Chipotle</h6><span>Free Burrito with every Purchase</span></div></div>"
 		    },
 		    {
-		        "title": "Pizza Bella",
+		        "title": " ",
 		        "lat": 42.1223608,
 		        "lng": -88.0483642,
-		        "description": "<strong>Pizza Bella: </strong>$3 for 3 slices"
+		        "description": "<div class='blurb'><img src='img/eat.jpg' alt='dee'><div class='righta'><h6>Pizza Bella</h6><span>Three slices for $3</span></div></div>"
 		    }
 		]
 
