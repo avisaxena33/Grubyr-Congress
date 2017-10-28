@@ -6,7 +6,7 @@ var foodCount = [];
 socket.on("showDeals", function(data)
 {
     document.getElementById("sidebar").innerHTML = "<h1> Deals Near You </h1>";
-    
+
     foodCount = data.slice(0);
 
     foodCount.forEach(function(element)
@@ -26,17 +26,17 @@ socket.on("showDeals", function(data)
 
                     document.getElementById("sidebar").appendChild(div);
 
-            
+
                }
         });
 });
 
 socket.on("addFood", function(data)
 {
-    
+
     if(data.city.toLowerCase() == userCity.toLowerCase())
-       {    
-           
+       {
+
             foodCount.push(data);
             var div = document.createElement("div");
             div.className = "item";
@@ -240,22 +240,13 @@ socket.on("upvote", function(data)
 		        "title": " ",
 		        "lat": 42.1387124,
 		        "lng": -88.0277098,
-<<<<<<< HEAD
-		        "description": "<div class='blurb'><img src='img/eat.jpg' alt='dee'><div class='righta'><h6>Napoli's Pizza</h6><span>5 Slices for $3</span></div></div>"
-
-=======
 		        "description": "<div class='blurb'><img src='img/eat.jpg' alt='dee'><div class='righta'><h6>Chipotle</h6><span>Free Burrito with every Purchase</span></div></div>"
->>>>>>> 9d22da3f2892cee08d78572db9ff6b29412b9db0
 		    },
 		    {
 		        "title": " ",
 		        "lat": 42.1223608,
 		        "lng": -88.0483642,
-<<<<<<< HEAD
-		        "description": "<div class='blurb'><img src='img/eat.jpg' alt='dee'><div class='righta'><h6>Napoli's Pizza</h6><span>5 Slices for $3</span></div></div>"
-=======
 		        "description": "<div class='blurb'><img src='img/eat.jpg' alt='dee'><div class='righta'><h6>Pizza Bella</h6><span>Three slices for $3</span></div></div>"
->>>>>>> 9d22da3f2892cee08d78572db9ff6b29412b9db0
 		    }
 		]
 
