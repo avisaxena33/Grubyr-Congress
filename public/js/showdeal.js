@@ -232,21 +232,63 @@ socket.on("upvote", function(data)
 		var json = [
 		    {
 		        "title": " ",
-		        "lat": 42.104362,
-		        "lng": -88.023158,
-		        "description": "<div class='blurb'><img src='img/eat.jpg' alt='dee'><div class='righta'><h6>Napoli's Pizza</h6><span>5 Slices for $3</span></div></div>"
+		        "lat": 42.1088,
+		        "lng": -88.0344,
+		        "description": "<div class='blurb'><img src='img/rest/agioitalian.jpg' alt='dee'><div class='righta'><h6>Agio Italian Bistro</h6><span>two plates of Bruschetta for $8.00</span></div></div>"
 		    },
 		    {
 		        "title": " ",
-		        "lat": 42.1387124,
-		        "lng": -88.0277098,
-		        "description": "<div class='blurb'><img src='img/eat.jpg' alt='dee'><div class='righta'><h6>Chipotle</h6><span>Free Burrito with every Purchase</span></div></div>"
+		        "lat": 42.1259,
+		        "lng": -88.0622,
+		        "description": "<div class='blurb'><img src='img/rest/asahi.jpeg' alt='dee'><div class='righta'><h6>Asahi Japanese Restaurant</h6><span>Full White Dragon roll for $8.00</span></div></div>"
 		    },
 		    {
 		        "title": " ",
-		        "lat": 42.1223608,
-		        "lng": -88.0483642,
-		        "description": "<div class='blurb'><img src='img/eat.jpg' alt='dee'><div class='righta'><h6>Pizza Bella</h6><span>Three slices for $3</span></div></div>"
+		        "lat": 42.1246,
+		        "lng": -88.0635,
+		        "description": "<div class='blurb'><img src='img/rest/brants.jpg' alt='dee'><div class='righta'><h6>Brandt’s of Palatine</h6><span>Two trays of onion rings $6.00</span></div></div>"
+		    },
+		    {
+		        "title": " ",
+		        "lat": 42.1236664,
+		        "lng": -88.0502197,
+		        "description": "<div class='blurb'><img src='img/rest/brianna.jpg' alt='dee'><div class='righta'><h6>Briana’s Restaurant</h6><span>4 Blueberry pancakes for $7.00</span></div></div>"
+		    },
+		    {
+		        "title": " ",
+		        "lat": 42.1116,
+		        "lng": -88.0446,
+		        "description": "<div class='blurb'><img src='img/rest/gianna.jpg' alt='dee'><div class='righta'><h6>Gianni’s Cafe</h6><span>3 plates of Fried Ravioli $7.00</span></div></div>"
+		    },
+		    {
+		        "title": " ",
+		        "lat": 42.1100,
+		        "lng": -88.0471,
+		        "description": "<div class='blurb'><img src='img/rest/hengweng.jpg' alt='dee'><div class='righta'><h6>Heng Wing Restaurant</h6><span>4 egg rolls for $3.40</span></div></div>"
+		    },
+		    {
+		        "title": " ",
+		        "lat": 42.1070,
+		        "lng": -88.0343,
+		        "description": "<div class='blurb'><img src='img/rest/jjtwigs.jpg' alt='dee'><div class='righta'><h6>JJ Twig’s Pizza & Pub</h6><span>Two small pizzas for $6.50</span></div></div>"
+		    },
+		    {
+		        "title": " ",
+		        "lat": 42.1163,
+		        "lng": -88.0333,
+		        "description": "<div class='blurb'><img src='img/rest/loumalnatis.jpg' alt='dee'><div class='righta'><h6>Lou Malnati’s Pizzeria</h6><span>Three slices for $3</span></div></div>"
+		    },
+		    {
+		        "title": " ",
+		        "lat": 42.1108,
+		        "lng": -88.0459,
+		        "description": "<div class='blurb'><img src='img/rest/mexicouno.jpg' alt='dee'><div class='righta'><h6>Mexico Uno</h6><span>3 Chilaquiles for $8.00</span></div></div>"
+		    },
+		    {
+		        "title": " ",
+		        "lat": 42.1115,
+		        "lng": -88.0459,
+		        "description": "<div class='blurb'><img src='img/rest/taphousegrill.jpg' alt='dee'><div class='righta'><h6>Tap House Grill</h6><span>3 pork tacos $ 10.00</span></div></div>"
 		    }
 		]
 
